@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Extractor</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <main class="container">
+        <header>
+            <h1>CV Extractor</h1>
+            <p>Upload a CV in PDF or TXT format (max. 10 MB) and extract its structured information.</p>
+            <p class="notice">PDFs must contain selectable text. Scanned PDFs (images) are not supported.</p>
+        </header>
+
+        <section class="card">
+            <label id="dropzone" class="dropzone" for="file-input">
+                <span id="dropzone-text">Drag your file here or click to select it</span>
+                <small>Allowed formats: .pdf, .txt</small>
+                <input id="file-input" type="file" accept=".pdf,.txt" hidden>
+            </label>
+
+            <div class="actions">
+                <button id="extract-btn" type="button" disabled>Extract information</button>
+                <button id="clear-btn" type="button" class="secondary" disabled>Clear</button>
+            </div>
+
+            <p id="status" class="status" role="status" aria-live="polite"></p>
+        </section>
+
+        <section id="result" class="card" hidden>
+            <div class="result-header">
+                <h2>Result</h2>
+                <button id="copy-btn" type="button" class="secondary">Copy JSON</button>
+            </div>
+
+            <div id="result-view"></div>
+
+            <details>
+                <summary>View JSON</summary>
+                <pre id="result-json"></pre>
+            </details>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.14.5/dist/sweetalert2.all.min.js"></script>
+    <script src="/static/app.js"></script>
+</body>
+</html>

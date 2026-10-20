@@ -39,7 +39,8 @@ pip install -r requirements.txt
 
 | Project | Difficulty | Description |
 |---------|------------|-------------|
-| _Coming soon_ | - | - |
+| [Llm_api](Llm_api) | Beginner | A terminal conversational agent that chats with the `gemma3:4b` model through Ollama, using only the `requests` library. |
+| [Cv_extractor](Cv_extractor) | Intermediate | A FastAPI web app that extracts structured JSON data from PDF or TXT CVs using a local LLM, with file validation and a browser interface. |
 
 ## License
 
